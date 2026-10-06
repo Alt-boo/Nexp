@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-inline-size: 375px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+html {
+  scrollbar-gutter: stable;
+  scroll-behavior: smooth;
+}
+
+/* Сброс браузерных стилей для полей ввода */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-text-fill-color: var(--color-main-font) !important;
+  caret-color: var(--color-main-font);
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+/* Для конкретного поля поиска возвращаем И фон, И тень */
+.search-form__textfield:-webkit-autofill {
+  box-shadow:
+    inset 0 2px 8px var(--color-shadow_search),
+    0 0 0 1000px var(--color-bg_search) inset !important;
+  border-radius: 40px;
+}

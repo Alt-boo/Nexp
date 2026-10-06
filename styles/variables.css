@@ -1,0 +1,48 @@
+:root {
+  /* Светлая тема (по умолчанию) */
+  --font-family: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* Цвета шрифтов */
+  --color-main-font: #2d3748;
+  --color-brand-font: #363c49;
+  --color-second-font: #1787c2;
+  --color-additional-font_2: #fff;
+  --color-additional-font_3: #a5a28e;
+
+  /* Цвета бэкграундов */
+  --color-bg: #f9f9f9;
+  --color-bg_block: #f7f7f7;
+
+  /* Цвета поля ввода */
+  --color-bg_search: #f7f7f7;
+  --color-shadow_search: #d7d7d7;
+  --color-additional-font: #aaa;
+
+  /* Цвета кнопок */
+  --color-button: #1787c2;
+  --color-button-hover: #37abe9;
+  --color-button-text: #fff;
+  --color-button-shadow: rgba(0, 0, 0, 0.24);
+  --color-button-shadow-second: rgba(255, 255, 255, 0.7);
+
+  /* Цвета баннеров */
+  --color-bg_banner: #f7f7f7;
+  --color-banner-shadow: #acd1e4;
+  --color-banner-shadow-second: rgba(255, 255, 255, 0.7);
+  --color-decor: #cbd5e0;
+
+  /* Цвета панелей */
+  --color-shadow_panel: rgba(0, 0, 0, 0.24);
+  --color-shadow_panel-add: #acd1e4;
+  --color-shadow_panel-add2: rgba(174, 174, 192, 0.28);
+  --color-shadow_panel-add3: rgba(255, 255, 255, 0.7);
+  --color-bg_panel: #f7f7f7;
+  --color-bg_panel-add: #1787c2;
+  --color-bg_panel-add2: #f9f9f9;
+  --color-bg_panel-add3: #f3f8fa;
+  --color_panel-decor: #f7f7f7;
+
+  /* Цвета дополнительные */
+  --color-shadow_logo-2: rgba(0, 0, 0, 0.24);
+  --color-bg_round: #ececec;
+}

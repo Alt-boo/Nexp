@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Орган по сертификации - Независимая Экспертиза</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/os.css" />
+    <link rel="stylesheet" href="./styles/acc.css" />
+    <link rel="stylesheet" href="./styles/exp.css" />
+    <!-- Фавиконы -->
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo">
+          <img class="header__logo-image" src="./images/logo.svg" alt="" />
+        </a>
+        <nav class="header__menu">
+          <ul class="header__links-list">
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="./index.html">Главная</a>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link header__link_active" href="./os.html"
+                >Орган по сертификации</a
+              >
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Услуги</a>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Информация</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Перечень документов</a></li>
+                <li><a href="#">Схемы сертификации</a></li>
+                <li><a href="#">Правила рассмотрения жалоб</a></li>
+                <li><a href="#">Правила рассмотрения апелляций</a></li>
+                <li><a href="#">Права и обязанности заявителей</a></li>
+              </ul>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Публикации</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Новости компании</a></li>
+                <li><a href="#">Отраслевые новости</a></li>
+                <li><a href="#">Статьи и интервью</a></li>
+              </ul>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Переключатель -->
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Переключить тему"
+        >
+          <span class="theme-toggle__icon theme-toggle__icon_sun">
+            <img src="./svg/sun.svg" alt="" class="theme-toggle__icon-image" />
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon_moon">
+            <img src="./svg/moon.svg" alt="" class="theme-toggle__icon-image" />
+          </span>
+          <span class="theme-toggle__slider"></span>
+        </button>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="add-page">
+        <!-- Боковое меню -->
+        <aside class="sidebar">
+          <nav class="sidebar__menu">
+            <ul class="sidebar__list">
+              <!-- Пункт 1: Орган по сертификации -->
+              <li class="sidebar__item">
+                <a href="./os.html" class="sidebar__link"
+                  >Орган по сертификации</a
+                >
+              </li>
+
+              <!-- Пункт 2: Область аккредитации -->
+              <li class="sidebar__item">
+                <a href="./acc.html" class="sidebar__link"
+                  >Область аккредитации</a
+                >
+              </li>
+
+              <!-- Пункт 3: Наши эксперты -->
+              <li class="sidebar__item">
+                <a href="./exp.html" class="sidebar__link sidebar__link_active"
+                  >Наши эксперты</a
+                >
+              </li>
+
+              <!-- Пункт 4: Испытательные лаборатории -->
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">Испытательные лаборатории</a>
+              </li>
+
+              <!-- Пункт 5: Примерная стоимость работ -->
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">Примерная стоимость работ</a>
+              </li>
+
+              <!-- Пункт 6: Финансовая поддержка -->
+              <li class="sidebar__item">
+                <a href="#" class="sidebar__link">Финансовая поддержка</a>
+              </li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="acc-page__content">
+          <section class="exp-list">
+            <h1 class="block-title">Наши эксперты</h1>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand_container">
+          <a class="header__logo">
+            <img class="header__logo-image" src="./images/logo.svg" alt="" />
+          </a>
+          <h3 class="footer_brand">ООО "Независимая экспертиза"</h3>
+        </div>
+
+        <nav class="header__menu">
+          <h3 class="footer-title">Навигация по сайту</h3>
+          <ul class="header__links-list">
+            <li class="header__links-list-item">
+              <a class="header__link header__link_active" href="./index.html"
+                >главная</a
+              >
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="./os.html">орган по сертификации</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">услуги</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">информация</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">публикации</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <address class="footer-address">
+            <a href="tel:+74957226168">+7 (495) 722-61-68</a>
+            <a href="mailto:info@n-exp.ru">info@n-exp.ru</a>
+            <a href="#" class="address-link">
+              115280, г. Москва, ул. Ленинская Слобода, д. 19, эт.2, пом.
+              №R-277,R-277-1,R-281,R-281-1,R-282,R-283
+            </a>
+          </address>
+        </div>
+        <p class="footer-copy">
+          © 2026 сделано для ООО "Независимая экспертиза"
+        </p>
+      </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>

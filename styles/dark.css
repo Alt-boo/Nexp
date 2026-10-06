@@ -1,0 +1,99 @@
+/* Тёмная тема */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    /* Цвета шрифтов */
+    --color-main-font: #8ca8b7;
+    --color-brand-font: #94b8cb;
+    --color-additional-font_2: #36393b;
+
+    /* Цвета бэкграундов */
+    --color-bg: #36393b;
+    --color-bg_block: #3d4043;
+
+    /* Цвета поля ввода */
+    --color-bg_search: #36393b;
+    --color-shadow_search: #232323;
+    --color-additional-font: #707070;
+
+    /* Цвета кнопок */
+    --color-button-text: #36393b;
+    --color-button-shadow-second: rgba(92, 92, 92, 0.7);
+
+    /* Цвета баннеров */
+    --color-bg_banner: #36393b;
+    --color-banner-shadow: #202020;
+    --color-banner-shadow-second: rgba(92, 92, 92, 0.7);
+
+    /* Цвета панелей */
+    --color-bg_panel: #3d4043;
+    --color-bg_panel-add2: #36393b;
+    --color-shadow_panel-add: #202020;
+    --color-shadow_panel-add2: rgba(0, 0, 0, 0.28);
+    --color-shadow_panel-add3: rgba(103, 103, 103, 0.7);
+    --color-bg_panel-add3: #36393b;
+    --color_panel-decor: #36393b;
+
+    /* Цвета дополнительные */
+    --color-shadow_logo-2: rgba(0, 0, 0, 0.9);
+    --color-bg_round: #434649;
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle {
+    background-color: var(--color-bg_search);
+  }
+
+  :root:not([data-theme="light"]) .theme-toggle__slider {
+    transform: translateX(60px);
+    background-color: var(--color-bg_round);
+  }
+}
+
+/* ============================================
+   ТЁМНАЯ ТЕМА (ручная)
+   ============================================ */
+
+:root[data-theme="dark"] {
+  /* Цвета шрифтов */
+  --color-main-font: #8ca8b7;
+  --color-brand-font: #94b8cb;
+  --color-additional-font_2: #36393b;
+
+  /* Цвета бэкграундов */
+  --color-bg: #36393b;
+  --color-bg_block: #3d4043;
+
+  /* Цвета поля ввода */
+  --color-bg_search: #36393b;
+  --color-shadow_search: #232323;
+  --color-additional-font: #707070;
+
+  /* Цвета кнопок */
+  --color-button-text: #36393b;
+  --color-button-shadow-second: rgba(92, 92, 92, 0.7);
+
+  /* Цвета баннеров */
+  --color-bg_banner: #36393b;
+  --color-banner-shadow: #202020;
+  --color-banner-shadow-second: rgba(92, 92, 92, 0.7);
+
+  /* Цвета панелей */
+  --color-bg_panel: #3d4043;
+  --color-bg_panel-add2: #36393b;
+  --color-shadow_panel-add: #202020;
+  --color-shadow_panel-add2: rgba(0, 0, 0, 0.28);
+  --color-shadow_panel-add3: rgba(103, 103, 103, 0.7);
+  --color_panel-decor: #36393b;
+
+  /* Цвета дополнительные */
+  --color-shadow_logo-2: rgba(0, 0, 0, 0.9);
+  --color-bg_round: #434649;
+}
+
+:root[data-theme="dark"] .theme-toggle {
+  background-color: var(--color-bg_search);
+}
+
+:root[data-theme="dark"] .theme-toggle__slider {
+  transform: translateX(60px);
+  background-color: var(--color-bg_round);
+}

@@ -1,0 +1,184 @@
+.add-page {
+  display: flex;
+  gap: 60px;
+  max-width: 1824px;
+  width: 100%;
+  margin: 60px auto;
+}
+
+.acc-page__content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 60px;
+  flex-direction: column;
+}
+
+.acc-info {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 1530px;
+  background-color: var(--color-bg_block);
+  border-radius: 40px;
+  align-items: center;
+  padding: 60px;
+}
+
+.acc__list {
+  display: flex;
+  flex-direction: column;
+  list-style: disc;
+  gap: 5px;
+}
+
+.acc__item {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-main-font);
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ============================================
+   СЕКЦИЯ: ПЕРЕЧЕНЬ ПРОДУКЦИИ (АККОРДЕОН)
+   ============================================ */
+
+.search-form_products {
+  margin-left: 0;
+  margin-top: 30px;
+}
+
+/* Контейнер аккордеона */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 1530px;
+  margin: 0 auto;
+}
+
+.accordion__text mark {
+  background-color: transparent;
+  color: var(--color-second-font);
+  font-weight: 700;
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
+.accordion__item {
+  background-color: var(--color-bg_panel-add2);
+  border-radius: 40px;
+  box-shadow: 0 8px 16px var(--color-shadow_panel-add);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.accordion__item:hover {
+  box-shadow: 0 12px 24px var(--color-shadow_panel-add);
+}
+
+.accordion__header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 70px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.accordion__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-main-font);
+  transition: color 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.accordion__icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion__icon::before,
+.accordion__icon::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background-color: var(--color-main-font);
+  transition: transform 0.3s ease;
+}
+
+.accordion__icon::before {
+  transform: translateX(-4px) rotate(45deg);
+}
+
+.accordion__icon::after {
+  transform: translateX(4px) rotate(-45deg);
+}
+
+.accordion__item.active .accordion__icon::before {
+  transform: translateX(-4px) rotate(-45deg);
+}
+
+.accordion__item.active .accordion__icon::after {
+  transform: translateX(4px) rotate(45deg);
+}
+
+/* Контентная часть (скрытая) */
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordion__body {
+  padding: 0 40px 30px 40px;
+}
+
+.accordion__text {
+  font-size: 14px;
+  color: var(--color-main-font);
+  text-align: justify;
+}
+
+/* Состояние активного элемента */
+.accordion__item.active {
+  background-color: var(--color-bg_panel-add3);
+  box-shadow:
+    inset 3px 3px 4px var(--color-shadow_panel-add2),
+    inset -3px -3px 4px var(--color-shadow_panel-add3);
+}
+
+.tnved {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.products,
+.tnved {
+  scroll-margin-top: 100px; /* высота хедера + отступ */
+}

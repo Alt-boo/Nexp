@@ -1,0 +1,587 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Независимая Экспертиза</title>
+    <link rel="stylesheet" href="./fonts/fonts.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <link rel="stylesheet" href="./styles/light.css" />
+    <link rel="stylesheet" href="./styles/dark.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <!-- Фавиконы -->
+    <link rel="icon" href="./images/favicon.ico" sizes="any" />
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo">
+          <img class="header__logo-image" src="./images/logo.svg" alt="" />
+        </a>
+        <nav class="header__menu">
+          <ul class="header__links-list">
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link header__link_active" href="./index.html"
+                >Главная</a
+              >
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="./os.html">Орган по сертификации</a>
+              <ul class="dropdown-menu">
+                <li><a href="./os.html">Аккредитация</a></li>
+                <li><a href="./os.html">Состав органов управления</a></li>
+                <li><a href="./acc.html">Область аккредитации</a></li>
+                <li><a href="./acc.html">Перечень продукции</a></li>
+                <li><a href="./acc.html">Коды ТНВЭД</a></li>
+                <li><a href="./exp.html">Наши эксперты</a></li>
+                <li><a href="#">Испытательные лаборатории</a></li>
+                <li><a href="#">Примерная стоимость работ</a></li>
+                <li><a href="#">Финансовая поддержка</a></li>
+              </ul>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Услуги</a>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Информация</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Перечень документов</a></li>
+                <li><a href="#">Схемы сертификации</a></li>
+                <li><a href="#">Правила рассмотрения жалоб</a></li>
+                <li><a href="#">Правила рассмотрения апелляций</a></li>
+                <li><a href="#">Права и обязанности заявителей</a></li>
+              </ul>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Публикации</a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Новости компании</a></li>
+                <li><a href="#">Отраслевые новости</a></li>
+                <li><a href="#">Статьи и интервью</a></li>
+              </ul>
+            </li>
+            <li class="header__links-list-item header_dropdown">
+              <a class="header__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- Переключатель -->
+        <button
+          class="theme-toggle"
+          id="theme-toggle"
+          type="button"
+          aria-label="Переключить тему"
+        >
+          <span class="theme-toggle__icon theme-toggle__icon_sun">
+            <img src="./svg/sun.svg" alt="" class="theme-toggle__icon-image" />
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon_moon">
+            <img src="./svg/moon.svg" alt="" class="theme-toggle__icon-image" />
+          </span>
+          <span class="theme-toggle__slider"></span>
+        </button>
+      </div>
+    </header>
+    <main class="main-content">
+      <section class="main-section">
+        <div class="main-section_content">
+          <a class="main-section__logo">
+            <img
+              class="main-section__logo-image"
+              src="./images/logo.svg"
+              alt=""
+            />
+          </a>
+          <div class="main-section_brand">
+            <h1 class="brand_title">
+              <span class="brand_highlight">Независимая</span> экспертиза
+            </h1>
+            <h3 class="subtitle">Аттестат аккредитации: РОСС RU.0001.11ГБ09</h3>
+            <form class="search-form">
+              <label class="search-form__label">
+                <span class="search-form__label-text visually-hidden"
+                  >Поиск</span
+                >
+                <input
+                  type="text"
+                  placeholder="поиск"
+                  name="search"
+                  class="search-form__textfield"
+                />
+              </label>
+              <button type="submit" class="button search-form__button">
+                Найти
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- Галерея -->
+      <div class="section-about_gallery">
+        <div class="gallery-track-container">
+          <div class="gallery-track" id="galleryTrack">
+            <!-- блок 1 -->
+            <div class="gallery-card" data-link="#">
+              <div class="gallery-image_container">
+                <img class="gallery-image" src="./images/" alt="" />
+              </div>
+              <h3 class="gallery-card-title">Разрешительные документы</h3>
+              <p class="gallery-card-text">
+                Предоставляем услуги по подтверждению соответствия: сертификации
+                продукции и регистрации деклараций соответствия
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 2 -->
+            <div class="gallery-card" data-link="#">
+              <div class="gallery-image_container">
+                <img class="gallery-image" src="./images/" alt="" />
+              </div>
+              <h3 class="gallery-card-title">Испытания</h3>
+              <p class="gallery-card-text">
+                Предоставляем услуги по подтверждению соответствия: сертификации
+                продукции и регистрации деклараций соответствия
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 3 -->
+            <div class="gallery-card" data-link="#">
+              <div class="gallery-image_container">
+                <img class="gallery-image" src="./images/" alt="" />
+              </div>
+              <h3 class="gallery-card-title">Сертификация</h3>
+              <p class="gallery-card-text">
+                Предоставляем услуги по подтверждению соответствия: сертификации
+                продукции и регистрации деклараций соответствия
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 4 -->
+            <div class="gallery-card" data-link="#">
+              <div class="gallery-image_container">
+                <img class="gallery-image" src="./images/" alt="" />
+              </div>
+              <h3 class="gallery-card-title">Анализ состояния производства</h3>
+              <p class="gallery-card-text">
+                Предоставляем услуги по подтверждению соответствия: сертификации
+                продукции и регистрации деклараций соответствия соответствия
+                соответствия
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 5 -->
+            <div class="gallery-card" data-link="#">
+              <div class="gallery-image_container">
+                <img class="gallery-image" src="./images/" alt="" />
+              </div>
+              <h3 class="gallery-card-title">Инспекционный контроль</h3>
+              <p class="gallery-card-text">
+                Предоставляем услуги по подтверждению соответствия: сертификации
+                продукции и регистрации деклараций соответствия
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-dots">
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </div>
+      <section class="about">
+        <h2 class="about-title">О компании</h2>
+        <!-- О нас -->
+        <div class="section-about_info">
+          <!-- Карточка 1 -->
+          <article class="info-card">
+            <div class="info-card_desc">
+              <h3 class="info-card_title">ОC "Независимая экспертиза"</h3>
+              <p class="info-card_text">
+                Предоставляем услуги по подтверждению соответствия: сертификации
+                продукции и регистрации деклараций соответствия продукции
+                требованиям технических регламентов Таможенного союза и ЕАЭС
+              </p>
+              <div class="info-card_footer">
+                <p class="info-card_subtitle">
+                  Мы специализируемся, прежде всего, на продукции
+                  машиностроения, оборудовании, электротехнике
+                </p>
+              </div>
+            </div>
+            <div class="info-card_image-container">
+              <img
+                class="info-card_image"
+                src="./images/card_about-photo.jpg"
+                alt=""
+              />
+            </div>
+          </article>
+          <!-- Карточка 2 -->
+          <article class="info-card">
+            <div class="info-card_desc">
+              <h3 class="info-card_title">Эксперты</h3>
+              <p class="info-card_text">
+                Главная наша гордость — наши эксперты, каждый из которых имеет
+                высшее инженерно-техническое образование, высокую квалификацию и
+                значительный опыт работы в сфере сертификации продукции
+              </p>
+              <div class="info-card_footer">
+                <p class="info-card_subtitle">Текст-заметка про экспертов</p>
+              </div>
+            </div>
+            <div class="info-card_image-container">
+              <img
+                class="info-card_image"
+                src="./images/card_about-photo.jpg"
+                alt=""
+              />
+            </div>
+          </article>
+          <!-- Карточка 3 -->
+          <article class="info-card">
+            <div class="info-card_desc">
+              <h3 class="info-card_title">Испытания</h3>
+              <p class="info-card_text">
+                Испытания сертифицируемой продукции проводятся исключительно в
+                аккредитованных испытательных лабораториях и центрах
+              </p>
+              <div class="info-card_footer">
+                <p class="info-card_subtitle">
+                  Текст-заметка про лаборатории и испытания
+                </p>
+              </div>
+            </div>
+            <div class="info-card_image-container">
+              <img
+                class="info-card_image"
+                src="./images/card_about-photo.jpg"
+                alt=""
+              />
+            </div>
+          </article>
+        </div>
+        <div class="button-wrapper">
+          <button class="button about-section_button">Подробнее</button>
+        </div>
+      </section>
+      <!-- Партнерский баннер -->
+      <div class="banner partner-banner">
+        <div class="banner-text">
+          <h3 class="partner-banner_subtitle">партнер и участник</h3>
+        </div>
+        <img
+          class="partner-banner__logo-image"
+          src="./images/logo-ASSTR.png"
+          alt=""
+        />
+      </div>
+      <section class="tech">
+        <h2 class="section-title">
+          Технические <span class="section-title_highlight">регламенты</span>
+        </h2>
+        <div class="tech_container">
+          <!-- Карточка 1 -->
+          <article class="tech-card">
+            <a href="#" class="tech-card_title">ТР ТС 004/2011</a>
+            <h4 class="tech-card_subtitle">
+              О безопасности низковольтного оборудования
+            </h4>
+          </article>
+          <!-- Карточка 2 -->
+          <article class="tech-card">
+            <a href="#" class="tech-card_title">ТР ТС 010/2011</a>
+            <h4 class="tech-card_subtitle">
+              О безопасности машин и оборудования
+            </h4>
+          </article>
+          <!-- Карточка 3 -->
+          <article class="tech-card">
+            <a href="#" class="tech-card_title">ТР ТС 016/2011</a>
+            <h4 class="tech-card_subtitle">
+              О безопасности аппаратов, работающих на газообразном топливе
+            </h4>
+          </article>
+          <!-- Карточка 4 -->
+          <article class="tech-card">
+            <a href="#" class="tech-card_title">ТР ТС 020/2011</a>
+            <h4 class="tech-card_subtitle">
+              Электромагнитная совместимость технических средств
+            </h4>
+          </article>
+          <!-- Карточка 5 -->
+          <article class="tech-card">
+            <a href="#" class="tech-card_title">ТР ТС 032/2013</a>
+            <h4 class="tech-card_subtitle">
+              О безопасности оборудования, работающего под избыточным давлением
+            </h4>
+          </article>
+          <!-- Карточка 6 -->
+          <article class="tech-card">
+            <a href="#" class="tech-card_title">ТР ЕАЭС 037/2016</a>
+            <h4 class="tech-card_subtitle">
+              Об ограничении применения опасных веществ в изделиях
+              электротехники и радиоэлектроники
+            </h4>
+          </article>
+        </div>
+        <div class="tech-decor"></div>
+        <div class="button-wrapper">
+          <button class="button tech-section_button">Подробнее</button>
+        </div>
+      </section>
+      <section class="experts">
+        <h2 class="section-title">
+          Наши <span class="section-title_highlight">Эксперты</span>
+        </h2>
+        <div class="experts-card_list">
+          <!-- Карточка эксперта 1 -->
+          <article class="expert-card">
+            <div class="expert-info">
+              <h3 class="expert-card_title">Копеев Алексей Николаевич</h3>
+              <h4 class="expert-card_subtitle">
+                Руководитель органа по сертификации, эксперт по подтверждению
+                соответствия
+              </h4>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <div class="expert-photo_container">
+              <img class="expert-photo" src="./images/Photo-1.jpg" alt="" />
+            </div>
+          </article>
+          <!-- Карточка эксперта 2 -->
+          <article class="expert-card">
+            <div class="expert-info">
+              <h3 class="expert-card_title">Сачков Сергей Сергеевич</h3>
+              <h4 class="expert-card_subtitle">
+                Эксперт по подтверждению соответствия
+              </h4>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <div class="expert-photo_container">
+              <img class="expert-photo" src="./images/Photo-1.jpg" alt="" />
+            </div>
+          </article>
+          <!-- Карточка эксперта 3 -->
+          <article class="expert-card">
+            <div class="expert-info">
+              <h3 class="expert-card_title">Бочаров Станислав Игоревич</h3>
+              <h4 class="expert-card_subtitle">
+                Эксперт по подтверждению соответствия
+              </h4>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <div class="expert-photo_container">
+              <img class="expert-photo" src="./images/Photo-1.jpg" alt="" />
+            </div>
+          </article>
+          <!-- Карточка эксперта 4 -->
+          <article class="expert-card">
+            <div class="expert-info">
+              <h3 class="expert-card_title">Фесенко Евгений Александрович</h3>
+              <h4 class="expert-card_subtitle">
+                Эксперт по подтверждению соответствия
+              </h4>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <div class="expert-photo_container">
+              <img class="expert-photo" src="./images/Photo-1.jpg" alt="" />
+            </div>
+          </article>
+          <!-- Карточка эксперта 5 -->
+          <article class="expert-card">
+            <div class="expert-info">
+              <h3 class="expert-card_title">Исупов Михаил Юрьевич</h3>
+              <h4 class="expert-card_subtitle">
+                Эксперт по подтверждению соответствия
+              </h4>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <div class="expert-photo_container">
+              <img class="expert-photo" src="./images/Photo-1.jpg" alt="" />
+            </div>
+          </article>
+        </div>
+        <div class="button-wrapper">
+          <button class="button expert-section_button">Подробнее</button>
+        </div>
+      </section>
+      <section class="news">
+        <h2 class="news-title">Новости</h2>
+        <div class="news-gallery_container">
+          <div class="news-gallery-track" id="newsgalleryTrack">
+            <!-- блок 1 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 2 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 3 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 4 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 5 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 6 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+            <!-- блок 7 -->
+            <div class="news-gallery-card">
+              <div class="news-image_container">
+                <img
+                  class="expert-photo"
+                  src="./images/news_card-image.jpg"
+                  alt=""
+                />
+              </div>
+              <h3 class="news-gallery-card-title">Приказ Федеральной службы</h3>
+              <p class="news-gallery-card-text">
+                18 февраля 2025 г. приказом Федеральной службы по аккредитации
+                орган по сертификации
+              </p>
+              <a href="#" class="card-link">Подробнее →</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand_container">
+          <a class="header__logo">
+            <img class="header__logo-image" src="./images/logo.svg" alt="" />
+          </a>
+          <h3 class="footer_brand">ООО "Независимая экспертиза"</h3>
+        </div>
+
+        <nav class="header__menu">
+          <h3 class="footer-title">Навигация по сайту</h3>
+          <ul class="header__links-list">
+            <li class="header__links-list-item">
+              <a class="header__link header__link_active" href="./index.html"
+                >главная</a
+              >
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="./os.html">орган по сертификации</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">услуги</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">информация</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">публикации</a>
+            </li>
+            <li class="header__links-list-item">
+              <a class="header__link" href="#">контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="footer-contacts">
+          <h3 class="footer-title">Контакты</h3>
+          <address class="footer-address">
+            <a href="tel:+74957226168">+7 (495) 722-61-68</a>
+            <a href="mailto:info@n-exp.ru">info@n-exp.ru</a>
+            <a href="#" class="address-link">
+              115280, г. Москва, ул. Ленинская Слобода, д. 19, эт.2, пом.
+              №R-277,R-277-1,R-281,R-281-1,R-282,R-283
+            </a>
+          </address>
+        </div>
+        <p class="footer-copy">
+          © 2026 сделано для ООО "Независимая экспертиза"
+        </p>
+      </div>
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
