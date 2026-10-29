@@ -1,0 +1,495 @@
+/* ============================================
+   СТРАНИЦА ЭКСПЕРТОВ
+   ============================================ */
+
+.exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: var(--content-inner-width);
+  margin: 0 auto;
+}
+
+/* ============================================
+   КАРТОЧКА-АККОРДЕОН ЭКСПЕРТА
+   ============================================ */
+
+.expert-accordion {
+  background-color: var(--color-bg_panel-add2);
+  border-radius: 40px;
+  box-shadow:
+    inset 3px 3px 4px var(--color-shadow_panel-add2),
+    inset -3px -3px 4px var(--color-shadow_panel-add3);
+  overflow: hidden;
+  transition:
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+/* В закрытом состоянии */
+.expert-accordion:not(.active) {
+  background-color: var(--color-bg_panel);
+  box-shadow: 0 8px 16px var(--color-shadow_panel-add);
+}
+
+.expert-accordion:not(.active):hover {
+  box-shadow: 0 12px 24px var(--color-shadow_panel-add);
+}
+
+/* ============================================
+   ШАПКА (КРАТКАЯ ИНФОРМАЦИЯ)
+   ============================================ */
+
+.expert-accordion_header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 30px 70px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+  transition:
+    opacity 0.3s ease,
+    padding 0.3s ease,
+    max-height 0.4s ease;
+  max-height: 300px;
+  opacity: 1;
+  overflow: hidden;
+}
+
+/* При открытии шапка плавно исчезает */
+.expert-accordion.active .expert-accordion_header {
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  pointer-events: none;
+}
+
+.expert-accordion_preview {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.expert-accordion_photo-wrapper {
+  flex-shrink: 0;
+  width: 108px;
+  height: 108px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--color-bg_panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.expert-accordion_photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.expert-accordion_preview-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.expert-accordion_name {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-main-font);
+  transition: color 0.3s ease;
+}
+
+.expert-accordion_role {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-main-font);
+  line-height: 1.4;
+}
+
+.expert-accordion_scope {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-main-font);
+}
+
+/* ============================================
+   КОНТЕНТНАЯ ЧАСТЬ (ПОДРОБНАЯ ИНФОРМАЦИЯ)
+   ============================================ */
+
+.expert-accordion_content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.expert-accordion_body {
+  position: relative;
+  padding: 40px;
+  border-radius: 40px;
+  background-color: var(--color-bg_panel-add2);
+  box-shadow:
+    inset 3px 3px 4px var(--color-shadow_panel-add2),
+    inset -3px -3px 4px var(--color-shadow_panel-add3);
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.expert-accordion_close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.expert-accordion_close:hover {
+  background-color: var(--color-bg_panel);
+}
+
+/* Сам крестик рисуем через псевдоэлементы — так же, как иконку аккордеона */
+.expert-accordion_close-icon {
+  position: relative;
+  width: 18px;
+  height: 18px;
+}
+
+.expert-accordion_close-icon::before,
+.expert-accordion_close-icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 2px;
+  background-color: var(--color-main-font);
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.expert-accordion_close-icon::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.expert-accordion_close-icon::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.expert-accordion_close:hover .expert-accordion_close-icon::before,
+.expert-accordion_close:hover .expert-accordion_close-icon::after {
+  background-color: var(--color-second-font);
+}
+
+/* ============================================
+   ПОДРОБНАЯ ИНФОРМАЦИЯ ОБ ЭКСПЕРТЕ
+   ============================================ */
+
+.expert-detail {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+.expert-detail_photo-wrapper {
+  flex-shrink: 0;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 40px;
+  overflow: hidden;
+}
+
+.expert-detail_photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.expert-detail_photo:hover {
+  transform: scale(1.05);
+}
+
+.expert-detail_info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+
+.expert-detail_name {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-main-font);
+  margin-bottom: 8px;
+}
+
+.expert-detail_role {
+  font-size: 16px;
+  color: var(--color-main-font);
+  line-height: 1.5;
+}
+
+.expert-detail_text {
+  font-size: 14px;
+  color: var(--color-main-font);
+  line-height: 1.6;
+}
+
+/* ============================================
+   ФОРМА ОБРАТНОЙ СВЯЗИ
+   ============================================ */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.contact-form_title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-main-font);
+  margin-bottom: 8px;
+}
+
+.contact-form_field {
+  display: block;
+  width: 100%;
+}
+
+.contact-form_row {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form_row .contact-form_field {
+  flex: 1;
+}
+
+.contact-form_input,
+.contact-form_textarea {
+  width: 100%;
+  padding: 12px 20px;
+  font-family: inherit;
+  font-size: 16px;
+  color: var(--color-main-font);
+  background-color: var(--color-bg_search);
+  border-radius: 40px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 2px 8px var(--color-shadow_search);
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-form_input::placeholder,
+.contact-form_textarea::placeholder {
+  color: var(--color-additional-font);
+}
+
+.contact-form_textarea {
+  border-radius: 40px;
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Капча */
+.contact-form_captcha {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 180px;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.contact-form_captcha-field {
+  display: block;
+  min-width: 0; /* важно: иначе grid-элемент не сжимается меньше содержимого */
+}
+
+/* Поле ввода капчи — переиспользует .contact-form_input */
+.contact-form_input_captcha {
+  text-align: center;
+  letter-spacing: 4px;
+  font-weight: 600;
+  box-sizing: border-box; /* чтобы padding не увеличивал ширину */
+}
+
+/* Правая часть: код + кнопка обновления — фиксированная ширина */
+.contact-form_captcha-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  background-color: var(--color-bg_search);
+  border-radius: 40px;
+  box-shadow: inset 0 2px 8px var(--color-shadow_search);
+  user-select: none;
+  overflow: hidden; /* на всякий случай — чтобы длинный код не «вылезал» */
+}
+
+.contact-form_captcha-code {
+  flex: 1;
+  min-width: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #e74c3c;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-align: center;
+  /* Ключевое: длинный код не должен расширять контейнер */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transform: skewX(-8deg);
+}
+
+.contact-form_captcha-refresh {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  color: var(--color-main-font);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.contact-form_captcha-refresh:hover {
+  color: var(--color-second-font);
+  transform: rotate(180deg);
+}
+
+/* Сообщение об ошибке — на всю ширину под полем */
+.contact-form_captcha-error {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  color: #e74c3c;
+  margin-top: 4px;
+}
+
+/* Подсветка поля при ошибке */
+.contact-form_input_captcha.is-invalid {
+  box-shadow:
+    inset 0 2px 8px var(--color-shadow_search),
+    0 0 0 2px #e74c3c;
+}
+
+/* Соглашение */
+.contact-form_agreement {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.contact-form_checkbox {
+  flex-shrink: 0;
+  margin-top: 3px;
+  accent-color: var(--color-button);
+}
+
+.contact-form_agreement-text {
+  font-size: 13px;
+  color: var(--color-main-font);
+  line-height: 1.4;
+}
+
+.contact-form_agreement-link {
+  color: var(--color-second-font);
+  text-decoration: none;
+}
+
+.contact-form_agreement-link:hover {
+  text-decoration: underline;
+}
+
+.contact-form_submit-wrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.contact-form_submit {
+  width: auto;
+  min-width: 208px;
+}
+
+/* ============================================
+   ГАЛЕРЕЯ ДИПЛОМОВ
+   ============================================ */
+
+.diploma-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.diploma-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.diploma-card_image-wrapper {
+  border-radius: 40px;
+  overflow: hidden;
+  background-color: transparent;
+  flex-shrink: 0;
+}
+
+.diploma-card_image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.diploma-card_image:hover {
+  transform: scale(1.05);
+}
+
+.diploma-card_caption {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-main-font);
+  line-height: 1.3;
+}
+
+.diploma-card_text {
+  font-size: 14px;
+  color: var(--color-main-font);
+  line-height: 1.5;
+}

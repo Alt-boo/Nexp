@@ -1,26 +1,25 @@
 .add-page {
   display: flex;
   gap: 60px;
-  max-width: 1824px;
+  max-width: var(--content-max-width);
   width: 100%;
   margin: 60px auto;
 }
 
 /* ===== ОСНОВНОЙ КОНТЕНТ СТРАНИЦЫ ===== */
-.os-page__content {
+.os-page_content {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 0;
   gap: 60px;
-  flex-direction: column;
 }
 
 .os-info {
   display: flex;
   flex-direction: column;
   gap: 60px;
-  max-width: 1530px;
+  max-width: var(--content-inner-width);
   background-color: var(--color-bg_block);
   border-radius: 40px;
   align-items: center;
@@ -58,7 +57,7 @@
   justify-content: space-between;
 }
 
-.os-accreditation__info {
+.os-accreditation_info {
   flex: 1;
   max-width: 700px;
 }
@@ -70,7 +69,7 @@
   margin-bottom: 30px;
 }
 
-.os-accreditation__list {
+.os-accreditation_list {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -78,17 +77,17 @@
   padding-left: 20px;
 }
 
-.os-accreditation__item {
+.os-accreditation_item {
   font-size: 18px;
   line-height: 1.5;
   color: var(--color-main-font);
 }
 
-.os-accreditation__item strong {
+.os-accreditation_item strong {
   font-weight: 600;
 }
 
-.os-accreditation__image-wrapper {
+.os-accreditation_image-wrapper {
   flex: 1;
   max-width: 575px;
   height: 390px;
@@ -96,7 +95,7 @@
   overflow: hidden;
 }
 
-.os-accreditation__image {
+.os-accreditation_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -104,7 +103,7 @@
   transition: transform 0.4s ease;
 }
 
-.os-accreditation__image:hover {
+.os-accreditation_image:hover {
   transform: scale(1.05);
 }
 
@@ -115,7 +114,7 @@
   gap: 60px;
 }
 
-.os-registry__image-wrapper {
+.os-registry_image-wrapper {
   flex: 1;
   max-width: 575px;
   height: 390px;
@@ -123,7 +122,7 @@
   overflow: hidden;
 }
 
-.os-registry__image {
+.os-registry_image {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -131,11 +130,11 @@
   transition: transform 0.4s ease;
 }
 
-.os-registry__image:hover {
+.os-registry_image:hover {
   transform: scale(1.05);
 }
 
-.os-registry__text {
+.os-registry_text {
   font-size: 16px;
   color: var(--color-second-font);
   font-weight: 400;
@@ -162,11 +161,14 @@
 .block_button-wrapper {
   display: flex;
   justify-content: flex-end;
-  width: 1530px;
+  width: 100%;
+  max-width: var(--content-inner-width);
+  margin: 0 auto;
   padding: 0 60px;
+  box-sizing: border-box;
 }
 
 .os-documentation,
 .os-management {
-  scroll-margin-top: 100px; /* высота хедера + отступ */
+  scroll-margin-top: 80px; /* высота хедера + отступ */
 }

@@ -1,13 +1,9 @@
-/* ============================================
-   СВЕТЛАЯ ТЕМА (ПО УМОЛЧАНИЮ)
-   ============================================ */
-
-:root:not([data-theme="dark"]) .theme-toggle {
+:root[data-theme="light"] .theme-toggle {
   background-color: var(--color-bg_search);
   border-color: var(--color-decor);
 }
 
-:root:not([data-theme="dark"]) .theme-toggle__slider {
+:root[data-theme="light"] .theme-toggle_slider {
   transform: translateX(0);
-  background-color: var(--color-bg_panel);
+  background-color: var(--color-bg_round);
 }

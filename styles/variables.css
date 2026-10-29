@@ -45,4 +45,12 @@
   /* Цвета дополнительные */
   --color-shadow_logo-2: rgba(0, 0, 0, 0.24);
   --color-bg_round: #ececec;
+
+  /* Сетка ширины */
+  --page-max-width: 1920px; /* внешний контейнер (.page) */
+  --page-padding: 20px; /* боковые отступы .page */
+
+  --content-max-width: 1824px; /* основная ширина секций */
+  --content-inner-width: 1530px; /* внутренние карточки/аккордеоны */
+  --content-narrow-width: 1440px; /* самый узкий контент (о компании, эксперты) */
 }
