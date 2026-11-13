@@ -1,0 +1,37 @@
+.sup-page_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 60px;
+}
+
+.sup-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sup-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-main-font);
+}
+
+.sup_list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: disc;
+  padding-left: 60px;
+}
+
+.sup_list_item {
+  font-size: 16px;
+  color: var(--color-main-font);
+  transition: color 0.3s ease;
+}
+
+.sup_list_item:hover {
+  color: var(--color-second-font);
+}

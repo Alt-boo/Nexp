@@ -1,0 +1,102 @@
+/* ============================================
+   СТРАНИЦА ЛАБОРАТОРИЙ
+   ============================================ */
+.labs-page_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 60px;
+}
+
+.labs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+  max-width: var(--content-inner-width);
+  margin: 0 auto;
+}
+
+/* ============================================
+   ТАБЛИЦА ЛАБОРАТОРИЙ
+   ============================================ */
+
+.labs-table-wrapper {
+  width: 100%;
+  border-radius: 40px;
+  background-color: var(--color-bg_panel);
+  box-shadow: 0 8px 16px var(--color-shadow_panel-add);
+}
+
+.labs-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  color: var(--color-main-font);
+}
+
+/* Заголовок таблицы */
+.labs-table_head {
+  background-color: var(--color-bg_panel-add3);
+}
+
+.labs-table_th {
+  padding: 24px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-main-font);
+  border-bottom: 1px solid var(--color-decor);
+  vertical-align: top;
+  text-align: center;
+}
+
+.labs-table_th-id {
+  width: 80px;
+  text-align: center;
+}
+
+.labs-table_th-reg {
+  width: 240px;
+}
+
+/* Тело таблицы */
+.labs-table_body .labs-table_row {
+  transition: background-color 0.3s ease;
+}
+
+.labs-table_body .labs-table_row:hover {
+  background-color: var(--color-bg_panel-add3);
+}
+
+.labs-table_td {
+  padding: 24px 30px;
+  vertical-align: center;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-decor);
+}
+
+/* Убираем нижнюю границу у последней строки */
+.labs-table_body .labs-table_row:last-child .labs-table_td {
+  border-bottom: none;
+}
+
+.labs-table_td-id {
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-second-font);
+}
+
+.labs-table_body .labs-table_row:last-child .labs-table_td-id {
+  border-radius: 0 0 0 40px;
+}
+
+.labs-table_td-reg {
+  font-weight: 500;
+  color: var(--color-second-font);
+}
+
+.labs-table_body .labs-table_row:last-child .labs-table_td-reg {
+  border-radius: 0 0 40px 0;
+}

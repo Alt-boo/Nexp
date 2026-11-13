@@ -1,0 +1,223 @@
+/* ============================================
+   СТРАНИЦА СТОИМОСТИ РАБОТ
+   ============================================ */
+.price-page_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 60px;
+}
+
+.price-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ============================================
+   ТАБЛИЦЫ
+   ============================================ */
+.price-table-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.price-table-caption {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-main-font);
+  text-align: center;
+}
+
+.price-table-wrapper {
+  width: 100%;
+  border-radius: 40px;
+  background-color: var(--color-bg_panel);
+  box-shadow: 0 8px 16px var(--color-shadow_panel-add);
+}
+
+.price-table-wrapper_schemes {
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  color: var(--color-main-font);
+}
+
+.price-table_head {
+  background-color: var(--color-bg_panel-add3);
+}
+
+.price-table_th {
+  padding: 20px 30px;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--color-main-font);
+  border-bottom: 1px solid var(--color-decor);
+  vertical-align: middle;
+  text-align: center;
+}
+
+.price-table_td {
+  padding: 20px 30px;
+  vertical-align: middle;
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-decor);
+}
+
+.price-table_body tr {
+  transition: background-color 0.3s ease;
+}
+
+.price-table_body tr:hover {
+  background-color: var(--color-bg_panel-add3);
+}
+
+.price-table_body tr:last-child .price-table_td {
+  border-bottom: none;
+}
+
+/* Специфичные ширины для колонок */
+.price-table_th-id,
+.price-table_td-id {
+  width: 80px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-second-font);
+}
+
+.price-table_th-norm,
+.price-table_td-norm {
+  width: 200px;
+  text-align: center;
+}
+
+/* Таблица схем (без ID) */
+.price-table-schemes .price-table_th,
+.price-table-schemes .price-table_td {
+  text-align: center;
+}
+
+/* ============================================
+   ФОРМУЛЫ
+   ============================================ */
+.formula-container {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  overflow-x: auto; /* Для узких экранов, если формула не влезет */
+}
+
+.formula {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Times New Roman", serif; /* Классический вид для формул */
+  font-size: 24px;
+  color: var(--color-main-font);
+  white-space: nowrap;
+}
+
+.formula-symbol {
+  display: inline-block;
+}
+
+.formula-sub {
+  font-size: 14px;
+  vertical-align: sub;
+  margin-left: -4px; /* Небольшое сближение с основной буквой */
+}
+
+.formula-number {
+  margin-left: 20px;
+  font-family: var(--font-family);
+  font-size: 20px;
+}
+
+/* Дроби */
+.formula-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: middle;
+  font-size: 18px;
+  margin: 0 4px;
+}
+
+.formula-numerator {
+  border-bottom: 2px solid var(--color-main-font);
+  padding: 0 4px;
+  line-height: 1.2;
+}
+
+.formula-denominator {
+  padding: 0 4px;
+  line-height: 1.2;
+}
+
+.formula-numerator sub {
+  font-size: 12px;
+}
+
+/* Таблицы 2 и 3 (с колонками id и norm) */
+.price-table_body tr:last-child .price-table_td-id {
+  border-radius: 0 0 0 40px;
+}
+
+.price-table_body tr:last-child .price-table_td-norm {
+  border-radius: 0 0 40px 0;
+}
+
+/* Таблица 1 (схемы) — без модификаторов колонок */
+.price-table-schemes
+  .price-table_body
+  tr:last-child
+  .price-table_td:first-child {
+  border-radius: 0 0 0 40px;
+}
+
+.price-table-schemes
+  .price-table_body
+  tr:last-child
+  .price-table_td:last-child {
+  border-radius: 0 0 40px 0;
+}
+
+/* ============================================
+   АНИМАЦИЯ ФОРМУЛ ПРИ НАВЕДЕНИИ
+   ============================================ */
+
+.formula {
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease,
+    text-shadow 0.3s ease;
+  transform-origin: center;
+  cursor: default;
+}
+
+.formula:hover,
+.formula:hover .formula-symbol,
+.formula:hover .formula-sub,
+.formula:hover .formula-fraction,
+.formula:hover .formula-numerator,
+.formula:hover .formula-denominator,
+.formula:hover .formula-number,
+.formula:hover sub {
+  transform: scale(1.08);
+  color: var(--color-second-font);
+  text-shadow: 0 0 12px var(--color-shadow_panel-add);
+}
+
+.formula:hover .formula-numerator {
+  border-bottom-color: var(--color-second-font);
+}
