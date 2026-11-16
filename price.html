@@ -2,6 +2,19 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          var theme = stored
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: dark)").matches
+              ? "dark"
+              : "light";
+          document.documentElement.setAttribute("data-theme", theme);
+        } catch (e) {}
+      })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Орган по сертификации - Независимая Экспертиза</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -38,9 +51,9 @@
               >
             </li>
             <li class="header_links-list-item header_dropdown">
-              <a class="header_link" href="#">Услуги</a>
+              <a class="header_link" href="./uslugi.html">Услуги</a>
               <ul class="dropdown-menu">
-                <li><a href="#">Сертификация продукции</a></li>
+                <li><a href="./uslugi.html">Сертификация продукции</a></li>
               </ul>
             </li>
             <li class="header_links-list-item header_dropdown">

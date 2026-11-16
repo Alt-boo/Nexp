@@ -1,0 +1,22 @@
+/* ============================================
+   СТРАНИЦА УСЛУГИ
+   ============================================ */
+.uslugi-page_content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  gap: 60px;
+}
+
+.uslugi-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.uslugi-sert {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   /* Светлая тема (по умолчанию) */
   --font-family: "Inter", system-ui, -apple-system, sans-serif;
 
@@ -53,4 +54,8 @@
   --content-max-width: 1824px; /* основная ширина секций */
   --content-inner-width: 1530px; /* внутренние карточки/аккордеоны */
   --content-narrow-width: 1440px; /* самый узкий контент (о компании, эксперты) */
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
